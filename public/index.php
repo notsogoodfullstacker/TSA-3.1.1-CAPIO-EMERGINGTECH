@@ -1,13 +1,8 @@
 <?php
 
-use CodeIgniter\Boot;
-use Config\Paths;
-
-/*
- *---------------------------------------------------------------
- * CHECK PHP VERSION
- *---------------------------------------------------------------
- */
+// Redirect root requests into the public folder
+header('Location: public/');
+exit;
 
 $minPhpVersion = '8.2'; // If you update this, don't forget to update `spark`.
 if (version_compare(PHP_VERSION, $minPhpVersion, '<')) {
